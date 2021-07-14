@@ -1,0 +1,7 @@
+body {
+cursor: url(./src/images/custom-cursor.png) 10 2, auto;
+}
+
+body:active {
+       cursor: url(./src/images/cursor-click.png) 10 2, auto;
+}
