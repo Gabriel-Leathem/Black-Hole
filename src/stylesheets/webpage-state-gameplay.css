@@ -7,6 +7,7 @@
     color: white;
     z-index: 100;
     text-align: center;
+    pointer-events: none;
 }
 
 #trapezoid-uranium-count-container {
@@ -83,7 +84,7 @@
 
 #sidenav-left {
   height: 100%;
-  width: 17vw;
+  width: 0vw;
   position: fixed;
   z-index: 1;
   top: 0;
