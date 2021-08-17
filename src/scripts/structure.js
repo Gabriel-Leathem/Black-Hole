@@ -9,7 +9,7 @@ class Structure {
 
 	cost() {
 		return this.initialCost * this.costMultiplier;
-		this.costMultiplier
+		this.costMultiplier;
 	}
 
 	buy(amount) {
@@ -19,4 +19,10 @@ class Structure {
 
 function costMultiplier(x) {
   	return Math.pow(x, 2)
+}
+
+class autoClicker extends Structure {
+	constructor(name, initialCost, uraniumPerSecond) {
+	super(name, initialCost, uraniumPerSecond);
+	}
 }

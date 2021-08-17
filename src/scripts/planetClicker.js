@@ -8,6 +8,7 @@ class PlanetClicker {
 		document.getElementById("planet").addEventListener("click", function(event) {
 			that.isLeftButtonDown = true;
 			that.uranium += that.clickValue;
+			// that.clickValue = 1000000;
 		});
 	}
 }
