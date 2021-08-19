@@ -21,7 +21,13 @@ function randomSign() {
     return Math.sign(Math.random() - 0.5);
 }
 
+//Instantiating Objects
 let planetClicker = new PlanetClicker(0, 1);
+let uraniumBooster = new UraniumBooster("Uranium Booster", 20, costMultiplier);
+
+document.getElementById("uranium-booster").addEventListener("click", function(event) {
+	uraniumBooster.buyUraniumBooster(planetClicker);
+});
 
 //stars setup
 let stars = [];
@@ -40,13 +46,10 @@ for (var i = 0; i < STAR_NUM; i++) {
 	}
 }
 
-function init() {
-	let exampleStructure = new Structure("Factory", 500, 1);
-}
-
 function animate(timeNow) {
 
 	document.getElementById("uranium-text").textContent = planetClicker.uranium;
+	document.getElementById("uranium-booster-cost").textContent = uraniumBooster.cost();
 
 	//calculating time difference for star background
 	timeDelta = timeNow - timeLast;
@@ -92,4 +95,3 @@ function animate(timeNow) {
 }
 
 animate(0);
-init();

@@ -1,4 +1,5 @@
 #uranium-text {
+    font-family: Varela Round;
     margin-top: 1vh;
     width: 100vw;
     position: absolute;
@@ -7,6 +8,32 @@
     color: white;
     z-index: 100;
     text-align: center;
+    pointer-events: none;
+}
+
+#below-uranium-text {
+    font-family: Varela Round;
+    margin-top: 4vh;
+    color: #32A852;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    text-align: center;
+    pointer-events: none;
+}
+
+#uranium-booster-cost {
+    font-family: Varela Round;
+    margin-top: 14vh;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 13vw;
     pointer-events: none;
 }
 
@@ -131,13 +158,13 @@
     background: #2ca4cc;
     background-size: 25vw;
     color: #e4ecef;
-    text-align: center;
+    text-align: left;
     font-family: inherit;
     font-size: 1vw;
     border: none;
     margin-top: 0.5vh;
     margin-bottom: 0.5vh;
-    height: calc(5vh + 1em);
+    height: calc(8vh + 1em);
     transition: background 0.2s;
 }
 
@@ -146,10 +173,12 @@
 }
 
 #close-settings {
+    font-size: 1.5vw;
     position: absolute;
     margin-left: 0;
-    padding-left: 15vw;
+    padding-left: 17vw;
     padding-right: 0;
+    padding-top: 0.7vh;
     top: 0.1vh;
 }
 

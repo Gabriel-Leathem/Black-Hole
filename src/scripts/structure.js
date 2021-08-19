@@ -1,14 +1,14 @@
 class Structure {
-	constructor(name, initialCost, uraniumPerSecond) {
+	constructor(name, initialCost, uraniumPerSecond, costMultiplier) {
 		this.name = name;
 		this.initialCost = initialCost;
 		this.uraniumPerSecond = uraniumPerSecond;
 		this.count = 0;
-		this.costMultiplier = 1;
+		this.costMultiplier = costMultiplier;
 	}
 
 	cost() {
-		return this.initialCost * this.costMultiplier;
+		return this.initialCost * this.costMultiplier(this.count);
 		this.costMultiplier;
 	}
 
@@ -18,11 +18,20 @@ class Structure {
 }
 
 function costMultiplier(x) {
-  	return Math.pow(x, 2)
+  	return Math.pow(4, x);
 }
 
-class autoClicker extends Structure {
-	constructor(name, initialCost, uraniumPerSecond) {
-	super(name, initialCost, uraniumPerSecond);
+class UraniumBooster extends Structure {
+	constructor(name, initialCost, costMultiplier) {
+	super(name, initialCost, 0, costMultiplier);
+	}
+	buyUraniumBooster(planetClicker) {
+		if (planetClicker.uranium >= this.initialCost) {
+			planetClicker.clickValue *= 2;
+			planetClicker.uranium -= this.cost();
+			this.buy(1);
+		} else {
+			alert("You don't have enough uranium for that kind sir!");
+		}
 	}
 }
