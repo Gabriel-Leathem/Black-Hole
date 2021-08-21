@@ -21,12 +21,18 @@ function randomSign() {
     return Math.sign(Math.random() - 0.5);
 }
 
-//Instantiating Objects
+//Instantiating Objects/Structures
 let planetClicker = new PlanetClicker(0, 1);
 let uraniumBooster = new UraniumBooster("Uranium Booster", 20, costMultiplier);
+let autoClicker = new AutoClicker("Auto Clicker", 20, costMultiplier);
 
+//buying structures
 document.getElementById("uranium-booster").addEventListener("click", function(event) {
 	uraniumBooster.buyUraniumBooster(planetClicker);
+});
+
+document.getElementById("auto-clicker").addEventListener("click", function(event) {
+	autoClicker.buyAutoClicker(planetClicker);
 });
 
 //stars setup
@@ -50,6 +56,7 @@ function animate(timeNow) {
 
 	document.getElementById("uranium-text").textContent = planetClicker.uranium;
 	document.getElementById("uranium-booster-cost").textContent = uraniumBooster.cost();
+	document.getElementById("auto-clicker-cost").textContent = autoClicker.cost();
 
 	//calculating time difference for star background
 	timeDelta = timeNow - timeLast;

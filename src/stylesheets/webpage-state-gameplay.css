@@ -37,6 +37,19 @@
     pointer-events: none;
 }
 
+#auto-clicker-cost {
+    font-family: Varela Round;
+    margin-top: 25vh;
+    color: white;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 13vw;
+    pointer-events: none;
+}
+
 #trapezoid-uranium-count-container {
 	position: absolute;
     border-top: 2vw solid #2b2b2b;
