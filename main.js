@@ -24,15 +24,30 @@ function randomSign() {
 //Instantiating Objects/Structures
 let planetClicker = new PlanetClicker(0, 1);
 let uraniumBooster = new UraniumBooster("Uranium Booster", 20, costMultiplier);
-let autoClicker = new AutoClicker("Auto Clicker", 20, costMultiplier);
+let autoClicker = new AutoClicker("Auto Clicker", 20, 0.1, costMultiplier);
+let miner = new Miner("Miner", 100, 1, costMultiplier);
+let miningDrill = new MiningDrill("Mining Drill", 1000, 8, costMultiplier);
+let uraniumMine = new UraniumMine("Uranium Mine", 12000, 47, costMultiplier);
 
-//buying structures
+//buying structures when they are clicked
 document.getElementById("uranium-booster").addEventListener("click", function(event) {
 	uraniumBooster.buyUraniumBooster(planetClicker);
 });
 
 document.getElementById("auto-clicker").addEventListener("click", function(event) {
 	autoClicker.buyAutoClicker(planetClicker);
+});
+
+document.getElementById("miner").addEventListener("click", function(event) {
+	miner.buyMiner(planetClicker);
+});
+
+document.getElementById("mining-drill").addEventListener("click", function(event) {
+	miningDrill.buyMiningDrill(planetClicker);
+});
+
+document.getElementById("uranium-mine").addEventListener("click", function(event) {
+	uraniumMine.buyUraniumMine(planetClicker);
 });
 
 //stars setup
@@ -52,11 +67,20 @@ for (var i = 0; i < STAR_NUM; i++) {
 	}
 }
 
+//animating the canvas constantly
 function animate(timeNow) {
 
+	///Text of the structure costs
 	document.getElementById("uranium-text").textContent = planetClicker.uranium;
 	document.getElementById("uranium-booster-cost").textContent = uraniumBooster.cost();
 	document.getElementById("auto-clicker-cost").textContent = autoClicker.cost();
+	document.getElementById("miner-cost").textContent = miner.cost();
+	document.getElementById("mining-drill-cost").textContent = miningDrill.cost();
+	document.getElementById("uranium-mine-cost").textContent = uraniumMine.cost();
+
+	/*for (var i = 0; i < planetClicker.uranium; i++) {
+		autoClicker.update();
+	}*/
 
 	//calculating time difference for star background
 	timeDelta = timeNow - timeLast;
@@ -99,6 +123,6 @@ function animate(timeNow) {
 
 	//call the next frame
 	requestAnimationFrame(animate);
-}
+};
 
 animate(0);

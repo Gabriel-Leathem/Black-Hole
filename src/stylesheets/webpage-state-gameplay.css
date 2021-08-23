@@ -27,26 +27,99 @@
 #uranium-booster-cost {
     font-family: Varela Round;
     margin-top: 14vh;
-    color: white;
+    color: grey;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
-    padding-left: 13vw;
+    padding-left: 8.5vw;
     pointer-events: none;
+}
+
+#uranium-booster-icon {
+    position: absolute;
+    width: 5vw;
+    padding-left: 11vw;
+    top: 6.7vh;
+}
+
+#auto-clicker-icon {
+    position: absolute;
+    width: 7vw;
+    padding-left: 10.3vw;
+    top: 16.5vh;
+}
+
+#miner-icon {
+    position: absolute;
+    width: 8vw;
+    padding-left: 9.6vw;
+    top: 27.5vh;
+}
+
+#mining-drill-icon {
+    position: absolute;
+    width: 8vw;
+    padding-left: 9.6vw;
+    top: 39vh;
+}
+
+#uranium-mine-icon {
+    position: absolute;
+    padding-left: 8vw;
+    top: 47vh;
 }
 
 #auto-clicker-cost {
     font-family: Varela Round;
     margin-top: 25vh;
-    color: white;
+    color: grey;
     width: 100vw;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
-    padding-left: 13vw;
+    padding-left: 7vw;
+    pointer-events: none;
+}
+
+#miner-cost {
+    font-family: Varela Round;
+    margin-top: 36vh;
+    color: grey;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 3.7vw;
+    pointer-events: none;
+}
+
+#mining-drill-cost {
+    font-family: Varela Round;
+    margin-top: 47vh;
+    color: grey;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 6.5vw;
+    pointer-events: none;
+}
+
+#uranium-mine-cost {
+    font-family: Varela Round;
+    margin-top: 58vh;
+    color: grey;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    padding-left: 7.4vw;
     pointer-events: none;
 }
 
@@ -124,7 +197,7 @@
 
 #sidenav-left {
   height: 100%;
-  width: 0vw;
+  width: 19vw;
   position: fixed;
   z-index: 1;
   top: 0;

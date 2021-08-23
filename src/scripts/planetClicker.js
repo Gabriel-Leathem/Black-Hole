@@ -1,3 +1,4 @@
+//Planet in the centre of the screen class
 class PlanetClicker {
 	constructor(uranium, clickValue) {
 		this.uranium = uranium;
